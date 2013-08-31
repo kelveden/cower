@@ -10,7 +10,7 @@ Provided under the [MIT License](http://opensource.org/licenses/MIT). Have fun.
 
 ## Prerequisites
 
-* You will need [Leiningen](https://github.com/technomancy/leiningen) 1.7.0 or above installed.
+You will need [Leiningen](https://github.com/technomancy/leiningen) 1.7.0 or above installed.
 
 ## Running
     lein ring uberjar
