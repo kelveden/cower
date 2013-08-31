@@ -17,7 +17,7 @@ You will need [Leiningen](https://github.com/technomancy/leiningen) 1.7.0 or abo
     cd bin
     ./start-cower
 
-Sysout and syserr are redirected to bin/cower.log. Note that the `start-cower` shell script is simply provided as an example of how one might kick-start Cower - modify as appropriate to needs. 
+Sysout and syserr are redirected to `bin/cower.log`. Note that the `start-cower` shell script is simply provided as an example of how one might kick-start Cower - modify as appropriate to needs. 
 
 ## Development
 To start a web server for the application, run:
