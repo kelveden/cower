@@ -1,0 +1,2 @@
+#!/bin/sh
+java -jar ../target/cower-0.1.0-standalone.jar &> cower.log &
