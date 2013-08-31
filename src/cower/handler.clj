@@ -26,28 +26,31 @@
 
 (defroutes app-routes
   (GET "/packages" []
-       (write-json (search "*")))
+       {:status 200
+        :body (write-json (search "*"))})
   
   (POST "/packages" [name url]
         (do 
           (wcar* (car/set name url))
-          { :status 201 }))
+          {:status 201}))
   
   (GET "/packages/:name" [name]
        (let [url (wcar* (car/get name)) ]
          (if (nil? url)
-           { :status 404 }
-           (write-json
-             (key-value-to-map [name url])))))
+           {:status 404}
+           {:status 200
+            :body (write-json
+                    (key-value-to-map [name url])) })))
   
   (DELETE "/packages/:name" [name]
           (do 
             (wcar* (car/del name))
-            { :status 204 }))
+            {:status 204}))
   
   (GET "/packages/search/:name" [name]
-       (write-json
-         (search (str "*" name "*"))))
+       {:status 200
+        :body (write-json
+                (search (str "*" name "*")))})
   
   (route/resources "/")
   (route/not-found "Not Found"))
