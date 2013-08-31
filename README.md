@@ -5,6 +5,9 @@ NOTE: This was done as a proof-of-concept as much as anything else and isn't rea
 
 The REST API for the registry is based on [bower/registry](https://github.com/bower/registry). The exception is the DELETE method against the `packages/:name` resource for unregistering a component - this is purely added for use via the likes of `curl` rather than bower itself.
 
+## Licensing
+Provided under the [MIT License](http://opensource.org/licenses/MIT). Have fun.
+
 ## Prerequisites
 
 * You will need [Leiningen](https://github.com/technomancy/leiningen) 1.7.0 or above installed.
