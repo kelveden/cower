@@ -39,4 +39,9 @@ Essentially though, you just need a `~/.bowerrc` that looks something like this:
     
 Or, if you don't want to faff around with your Bower config, you can specify Bower configuration on the fly like this:
 
-    bower register "mypackage" "myurl" --config.registry=http://<cower host>:3000
+    bower register mypackage myurl --config.registry=http://<cower host>:3000
+
+### Using from behind a company proxy
+If you're anything like me, you'll want to bypass your http proxy to access your internal bower registry. Unfortunately, bower doesn't have a "no_proxy" type of setting; therefore you'll need to specify it on the fly:
+
+    bower install mypackage --config.proxy=
