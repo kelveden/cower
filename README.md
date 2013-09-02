@@ -25,7 +25,7 @@ To start a web server for the application, run:
     lein ring server
 
 ## Using the registry
-The [Bower spec] has details on how to configure your local Bower installation to make use of custom registries like Cower. Take a look in the 'Configuration' section and, in particular, the registry object.
+The [Bower spec](https://docs.google.com/document/d/1APq7oA9tNao1UYWyOm8dKqlRP2blVkROYLZ2fLIjtWc) has details on how to configure your local Bower installation to make use of custom registries like Cower. Take a look in the 'Configuration' section and, in particular, the registry object.
 
 Essentially though, you just need a `~/.bowerrc` that looks something like this:
 
