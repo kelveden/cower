@@ -37,4 +37,6 @@ Essentially though, you just need a `~/.bowerrc` that looks something like this:
         }
     }
     
-(Note that this assumes that you will want to register your Javascript libraries to your custom registry rather than the main Bower registry.)
+Or, if you don't want to faff around with your Bower config, you can specify Bower configuration on the fly like this:
+
+    bower register "mypackage" "myurl" --config.registry=http://<cower host>:3000
