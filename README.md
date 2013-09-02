@@ -23,3 +23,18 @@ Sysout and syserr are redirected to `bin/cower.log`. Note that the `start-cower`
 To start a web server for the application, run:
 
     lein ring server
+
+## Using the registry
+The [Bower spec] has details on how to configure your local Bower installation to make use of custom registries like Cower. Take a look in the 'Configuration' section and, in particular, the registry object.
+
+Essentially though, you just need a `~/.bowerrc` that looks something like this:
+
+    {
+        "registry": {
+            "search": [ "http://<cower host>:3000", "http://bower.herokuapp.com" ]
+            "register": "http://<cower host>:3000"
+            "publish": "http://<cower host>:3000"
+        }
+    }
+    
+(Note that this assumes that you will want to register your Javascript libraries to your custom registry rather than the main Bower registry.)
