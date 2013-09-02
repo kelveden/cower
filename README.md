@@ -31,8 +31,8 @@ Essentially though, you just need a `~/.bowerrc` that looks something like this:
 
     {
         "registry": {
-            "search": [ "http://<cower host>:3000", "http://bower.herokuapp.com" ]
-            "register": "http://<cower host>:3000"
+            "search": [ "http://<cower host>:3000", "http://bower.herokuapp.com" ],
+            "register": "http://<cower host>:3000",
             "publish": "http://<cower host>:3000"
         }
     }
