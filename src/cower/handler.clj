@@ -9,7 +9,8 @@
 (defmacro wcar* [& body] `(car/wcar server1-conn ~@body))
 
 (defn- key-value-to-map [key-value]
-  (hash-map :name (nth key-value 0) :url (nth key-value 1)))
+  {:name (nth key-value 0)
+   :url (nth key-value 1)})
 
 (defn- key-values-to-json [keys values]
   (map key-value-to-map (zipmap keys values)))
