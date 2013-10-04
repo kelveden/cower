@@ -1,6 +1,6 @@
 (ns cower.handler
-  (:use compojure.core)
   (:require [clojure.data.json :as json]
+            [compojure.core :refer :all]
             [compojure.handler :as handler]
             [compojure.route :as route]
             [taoensso.carmine :as car :refer (wcar)]))
