@@ -30,9 +30,8 @@
         :body (write-json (search "*"))})
 
   (POST "/packages" [name url]
-        (do
-          (wcar* (car/set name url))
-          {:status 201}))
+        (wcar* (car/set name url))
+        {:status 201})
 
   (GET "/packages/:name" [name]
        (if-let [url (wcar* (car/get name))]
@@ -42,9 +41,8 @@
          {:status 404}))
 
   (DELETE "/packages/:name" [name]
-          (do
-            (wcar* (car/del name))
-            {:status 204}))
+          (wcar* (car/del name))
+          {:status 204})
 
   (GET "/packages/search/:name" [name]
        {:status 200
