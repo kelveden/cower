@@ -8,9 +8,8 @@
 (def server1-conn { :pool {} :spec {} })
 (defmacro wcar* [& body] `(car/wcar server1-conn ~@body))
 
-(defn- key-value-to-map [key-value]
-  {:name (nth key-value 0)
-   :url (nth key-value 1)})
+(defn- key-value-to-map [[k v]]
+  {:name k :url v})
 
 (defn- key-values-to-json [keys values]
   (map key-value-to-map (zipmap keys values)))
