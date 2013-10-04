@@ -36,11 +36,11 @@
 
   (GET "/packages/:name" [name]
        (let [url (wcar* (car/get name))]
-         (if (nil? url)
-           {:status 404}
+         (if url
            {:status 200
             :body (write-json
-                   (key-value-to-map [name url]))})))
+                   (key-value-to-map [name url]))}
+           {:status 404})))
 
   (DELETE "/packages/:name" [name]
           (do
