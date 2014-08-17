@@ -9,3 +9,5 @@ pom.xml
 .nrepl-*
 *.sublime*
 *.log
+*.iml
+.idea
